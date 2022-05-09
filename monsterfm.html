@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet"> 
+    <style>
+        body {
+            font-family: 'Rubik', sans-serif;
+            background-color: black;
+            color: #dfdede;
+        }
+        header {
+            color: black;
+        }
+        #sitelogo {
+            position: absolute;
+            top: 10px;
+            left: 40px;
+        }
+        #inicial {
+            background-color: black;
+            color: white;
+            padding: 0.5em 1em;
+            margin: 0;
+            font-weight: 900;
+            display: inline-block;
+        }
+        #textologo {
+            padding: 0.5em 1em;
+            margin: 0;
+            display: inline-block;
+        }
+        #logo {
+            font-weight: 500;
+            font-size: 40px;
+            border: 3px solid black;
+            background-color: white;
+        }
+        #slogan {
+            text-align: center;
+        }
+        #fondo {
+            width: 100%;
+        }
+        #mediaplayer {
+            margin: 0;
+            padding: 50px 40px;
+            font-size: 40px;
+            position: absolute;
+            top: 90px;
+            left: 0;
+            text-align: center;
+        }
+        #mediaplayer p {
+            margin: 0;
+        }
+        #clima_cdmx {
+            margin: 5px 0;
+        }
+        ul.material li {
+            list-style: none;
+            border: 1px solid #aaa;
+            margin: 10px;
+            padding: 1em;
+            box-shadow: rgba(60,64,67,0.3) 0px 1px 2px 0px,rgba(60,64,67,0.15) 0px 1px 3px 1px;
+        }
+        ul.material {
+            padding: 0;
+        }
+        #banner_fiebre_de_sabado {
+            text-align: center;
+        }
+        #banner_fiebre_de_sabado img {
+            max-width: 100%;
+            height: auto;
+        }
+        main h2 {
+            text-transform: uppercase;
+            border-bottom: 2px solid red;
+            display: inline-block;
+        }
+        @media screen and (max-width:580px) {
+            #sitelogo {
+                left:50%;
+                margin-left: -166px;
+            }
+            #fondo {
+                margin-top: 125px;
+            }
+            #mediaplayer p {
+                background-color: #e7ecce50;
+            }
+            #inicial, #textologo {
+                padding: 0.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img id="fondo" src="images/pexels-porapak-apichodilok-346728.jpg">
+        <div id="sitelogo">
+            <div id="logo"><span id="inicial">M</span><span id="textologo">Monster FM</span></div>
+            <div id="slogan">Minas (Uruguay) - Ciudad de México (México)</div>
+        </div>
+        <section id="mediaplayer">
+            <p>ESCUCHAR AHORA</p>
+            <button onclick="document.getElementById('player_html5').play();">
+                <img width="40" height="40" alt="play" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIiA/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgd2lkdGg9IjEyMDAiIGhlaWdodD0iOTAwIiB2aWV3Qm94PSIwIDAgMTIwMCA5MDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8ZGVzYz5DcmVhdGVkIHdpdGggRmFicmljLmpzIDQuMi4wPC9kZXNjPgo8ZGVmcz4KPC9kZWZzPgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ0cmFuc3BhcmVudCI+PC9yZWN0Pgo8ZyB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAxIDYwMCA0NTApIiBpZD0iZThhNjZhMjQtYzhlMi00ZTY2LWIyZjMtYTI1MTE2MmRjYTk3IiAgPgo8cmVjdCBzdHlsZT0ic3Ryb2tlOiBub25lOyBzdHJva2Utd2lkdGg6IDE7IHN0cm9rZS1kYXNoYXJyYXk6IG5vbmU7IHN0cm9rZS1saW5lY2FwOiBidXR0OyBzdHJva2UtZGFzaG9mZnNldDogMDsgc3Ryb2tlLWxpbmVqb2luOiBtaXRlcjsgc3Ryb2tlLW1pdGVybGltaXQ6IDQ7IGZpbGw6IHJnYigyNTUsMjU1LDI1NSk7IGZpbGwtb3BhY2l0eTogMDsgZmlsbC1ydWxlOiBub256ZXJvOyBvcGFjaXR5OiAxOyIgdmVjdG9yLWVmZmVjdD0ibm9uLXNjYWxpbmctc3Ryb2tlIiAgeD0iLTYwMCIgeT0iLTQ1MCIgcng9IjAiIHJ5PSIwIiB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI5MDAiIC8+CjwvZz4KPGcgdHJhbnNmb3JtPSJtYXRyaXgoSW5maW5pdHkgTmFOIE5hTiBJbmZpbml0eSAwIDApIiBpZD0iMjE2ZjkwOTItNDIzYS00NDhlLTg2MDItMzFmYmYxMzljZGQxIiAgPgo8L2c+CjxnIHRyYW5zZm9ybT0ibWF0cml4KDUuODcgMCAwIDUuODcgNjAwIDQ1MCkiIGlkPSJjNTMwNmY2OC1lMDFkLTQwMzctYmY3ZC1mZDgwMWMwNmE4ODEiICA+Cjxwb2x5Z29uIHN0eWxlPSJzdHJva2U6IHJnYigwLDAsMCk7IHN0cm9rZS13aWR0aDogMDsgc3Ryb2tlLWRhc2hhcnJheTogbm9uZTsgc3Ryb2tlLWxpbmVjYXA6IGJ1dHQ7IHN0cm9rZS1kYXNob2Zmc2V0OiAwOyBzdHJva2UtbGluZWpvaW46IG1pdGVyOyBzdHJva2UtbWl0ZXJsaW1pdDogNDsgZmlsbDogcmdiKDEwMSwxMDEsMTAxKTsgZmlsbC1ydWxlOiBub256ZXJvOyBvcGFjaXR5OiAxOyIgdmVjdG9yLWVmZmVjdD0ibm9uLXNjYWxpbmctc3Ryb2tlIiAgcG9pbnRzPSItMzAuNjgsLTM3LjQxIDMwLjY4LDAgLTMwLjY4LDM3LjQxICIgLz4KPC9nPgo8L3N2Zz4="/>
+            </button>
+            <button onclick="document.getElementById('player_html5').pause();">
+                <img width="40" height="40" alt="pause" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIiA/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgd2lkdGg9IjEyMDAiIGhlaWdodD0iOTAwIiB2aWV3Qm94PSIwIDAgMTIwMCA5MDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8ZGVzYz5DcmVhdGVkIHdpdGggRmFicmljLmpzIDQuMi4wPC9kZXNjPgo8ZGVmcz4KPC9kZWZzPgo8ZyB0cmFuc2Zvcm09Im1hdHJpeCgwIDAgMCAwIDAgMCkiIGlkPSIyMTZmOTA5Mi00MjNhLTQ0OGUtODYwMi0zMWZiZjEzOWNkZDEiICA+CjwvZz4KPGcgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSA2MDAgNDUwKSIgaWQ9ImU4YTY2YTI0LWM4ZTItNGU2Ni1iMmYzLWEyNTExNjJkY2E5NyIgID4KPHJlY3Qgc3R5bGU9InN0cm9rZTogbm9uZTsgc3Ryb2tlLXdpZHRoOiAxOyBzdHJva2UtZGFzaGFycmF5OiBub25lOyBzdHJva2UtbGluZWNhcDogYnV0dDsgc3Ryb2tlLWRhc2hvZmZzZXQ6IDA7IHN0cm9rZS1saW5lam9pbjogbWl0ZXI7IHN0cm9rZS1taXRlcmxpbWl0OiA0OyBmaWxsOiByZ2IoMjU1LDI1NSwyNTUpOyBmaWxsLW9wYWNpdHk6IDA7IGZpbGwtcnVsZTogbm9uemVybzsgb3BhY2l0eTogMTsiIHZlY3Rvci1lZmZlY3Q9Im5vbi1zY2FsaW5nLXN0cm9rZSIgIHg9Ii02MDAiIHk9Ii00NTAiIHJ4PSIwIiByeT0iMCIgd2lkdGg9IjEyMDAiIGhlaWdodD0iOTAwIiAvPgo8L2c+CjxnIHRyYW5zZm9ybT0ibWF0cml4KDYuNTIgMCAwIDYuNTIgNjAwIDQ1MCkiICA+CjxnIHN0eWxlPSIiIHZlY3Rvci1lZmZlY3Q9Im5vbi1zY2FsaW5nLXN0cm9rZSIgICA+CgkJPGcgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSAtMTUuNjMgMCkiICA+CjxyZWN0IHN0eWxlPSJzdHJva2U6IG5vbmU7IHN0cm9rZS13aWR0aDogMTsgc3Ryb2tlLWRhc2hhcnJheTogbm9uZTsgc3Ryb2tlLWxpbmVjYXA6IGJ1dHQ7IHN0cm9rZS1kYXNob2Zmc2V0OiAwOyBzdHJva2UtbGluZWpvaW46IG1pdGVyOyBzdHJva2UtbWl0ZXJsaW1pdDogNDsgZmlsbDogcmdiKDEwMSwxMDEsMTAxKTsgZmlsbC1ydWxlOiBub256ZXJvOyBvcGFjaXR5OiAxOyIgdmVjdG9yLWVmZmVjdD0ibm9uLXNjYWxpbmctc3Ryb2tlIiAgeD0iLTExLjQ2NiIgeT0iLTM3Ljc1IiByeD0iMCIgcnk9IjAiIHdpZHRoPSIyMi45MzIiIGhlaWdodD0iNzUuNSIgLz4KPC9nPgoJCTxnIHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIDEgMTUuNjMgMCkiICA+CjxyZWN0IHN0eWxlPSJzdHJva2U6IG5vbmU7IHN0cm9rZS13aWR0aDogMTsgc3Ryb2tlLWRhc2hhcnJheTogbm9uZTsgc3Ryb2tlLWxpbmVjYXA6IGJ1dHQ7IHN0cm9rZS1kYXNob2Zmc2V0OiAwOyBzdHJva2UtbGluZWpvaW46IG1pdGVyOyBzdHJva2UtbWl0ZXJsaW1pdDogNDsgZmlsbDogcmdiKDEwMSwxMDEsMTAxKTsgZmlsbC1ydWxlOiBub256ZXJvOyBvcGFjaXR5OiAxOyIgdmVjdG9yLWVmZmVjdD0ibm9uLXNjYWxpbmctc3Ryb2tlIiAgeD0iLTExLjQ2NiIgeT0iLTM3Ljc1IiByeD0iMCIgcnk9IjAiIHdpZHRoPSIyMi45MzIiIGhlaWdodD0iNzUuNSIgLz4KPC9nPgo8L2c+CjwvZz4KPC9zdmc+"/>
+            </button>
+            <button onclick="document.getElementById('player_html5').volume -= 0.1;">
+                <img width="40" height="40" alt="pause" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIiA/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgd2lkdGg9IjM2MSIgaGVpZ2h0PSIzMjEiIHZpZXdCb3g9IjAgMCAzNjEgMzIxIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGRlc2M+Q3JlYXRlZCB3aXRoIEZhYnJpYy5qcyAzLjYuMzwvZGVzYz4KPGRlZnM+CjwvZGVmcz4KPGcgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSAxODEgMTYxKSIgID4KPGcgc3R5bGU9IiIgICA+CgkJPGcgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSAtNTUwIC00MDApIiAgPgo8cmVjdCBzdHlsZT0ic3Ryb2tlOiBub25lOyBzdHJva2Utd2lkdGg6IDE7IHN0cm9rZS1kYXNoYXJyYXk6IG5vbmU7IHN0cm9rZS1saW5lY2FwOiBidXR0OyBzdHJva2UtZGFzaG9mZnNldDogMDsgc3Ryb2tlLWxpbmVqb2luOiBtaXRlcjsgc3Ryb2tlLW1pdGVybGltaXQ6IDQ7IGZpbGw6IHJnYigyNTUsMjU1LDI1NSk7IGZpbGwtb3BhY2l0eTogMDsgZmlsbC1ydWxlOiBub256ZXJvOyBvcGFjaXR5OiAxOyIgIHg9Ii01MCIgeT0iLTUwIiByeD0iMCIgcnk9IjAiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiAvPgo8L2c+CgkJPGcgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSAwIDApIiBpZD0iZThhNjZhMjQtYzhlMi00ZTY2LWIyZjMtYTI1MTE2MmRjYTk3IiAgPgo8cmVjdCBzdHlsZT0ic3Ryb2tlOiBub25lOyBzdHJva2Utd2lkdGg6IDE7IHN0cm9rZS1kYXNoYXJyYXk6IG5vbmU7IHN0cm9rZS1saW5lY2FwOiBidXR0OyBzdHJva2UtZGFzaG9mZnNldDogMDsgc3Ryb2tlLWxpbmVqb2luOiBtaXRlcjsgc3Ryb2tlLW1pdGVybGltaXQ6IDQ7IGZpbGw6IHJnYigyNTUsMjU1LDI1NSk7IGZpbGwtb3BhY2l0eTogMDsgZmlsbC1ydWxlOiBub256ZXJvOyBvcGFjaXR5OiAxOyIgdmVjdG9yLWVmZmVjdD0ibm9uLXNjYWxpbmctc3Ryb2tlIiAgeD0iLTYwMCIgeT0iLTQ1MCIgcng9IjAiIHJ5PSIwIiB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI5MDAiIC8+CjwvZz4KCQk8ZyB0cmFuc2Zvcm09Im1hdHJpeCg0LjgxIDAgMCA0LjgxIDAgLTAuMDIpIiBpZD0iMzUiICA+CjxwYXRoIHN0eWxlPSJzdHJva2U6IHJnYigwLDAsMCk7IHN0cm9rZS13aWR0aDogMDsgc3Ryb2tlLWRhc2hhcnJheTogbm9uZTsgc3Ryb2tlLWxpbmVjYXA6IGJ1dHQ7IHN0cm9rZS1kYXNob2Zmc2V0OiAwOyBzdHJva2UtbGluZWpvaW46IG1pdGVyOyBzdHJva2UtbWl0ZXJsaW1pdDogNDsgZmlsbDogcmdiKDEwMSwxMDEsMTAxKTsgZmlsbC1ydWxlOiBub256ZXJvOyBvcGFjaXR5OiAxOyIgdmVjdG9yLWVmZmVjdD0ibm9uLXNjYWxpbmctc3Ryb2tlIiAgdHJhbnNmb3JtPSIgdHJhbnNsYXRlKC00OS4yNSwgLTUwLjY3KSIgZD0iTSA0OS42MjggMTcuMzYzIEMgNTEuMjUyIDE3LjM2MyA1Mi41NjcgMTguNjc5IDUyLjU2NyAyMC4yNDkgTCA1Mi41NjcgODEuMDMyIEMgNTIuNTY3IDgyLjY1Mjk5OTk5OTk5OTk5IDUxLjI1MiA4My45NyA0OS42MjggODMuOTcgTCAzMC45MzkgNjMuODYgTCAxMy43NjkgNjMuODYgQyAxMi43MDUgNjMuODYgMTEuNzkzIDYzLjAwMSAxMS43OTMgNjEuOTM2IEwgMTEuNzkzIDM4Ljk5MSBDIDExLjc5MyAzNy45MjcgMTIuNzAzOTk5OTk5OTk5OTk5IDM3LjA2NiAxMy43Njg5OTk5OTk5OTk5OTggMzcuMDY2IEwgMzEuMjkzOTk5OTk5OTk5OTk3IDM3LjA2NiBMIDQ5LjYyOCAxNy4zNjMgeiBNIDg2LjcwNyA0Ny4xOTYgTCA4Ni43MDcgNTQuMTM1IEMgODYuNzA3IDU0LjUzOSA4Ni40MDI5OTk5OTk5OTk5OSA1NC44OTQgODUuOTk5IDU0Ljg5NCBMIDYwLjM2NyA1NC44OTQgQyA1OS45NjE5OTk5OTk5OTk5OTYgNTQuODk0IDU5LjYwOCA1NC41NCA1OS42MDggNTQuMTM1IEwgNTkuNjA4IDQ3LjE5NiBDIDU5LjYwOCA0Ni43OTEgNTkuOTYxOTk5OTk5OTk5OTk2IDQ2LjQzNyA2MC4zNjcgNDYuNDM3IEwgODUuOTk5IDQ2LjQzNyBDIDg2LjQwMyA0Ni40MzcgODYuNzA3IDQ2Ljc5MiA4Ni43MDcgNDcuMTk2IHoiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgLz4KPC9nPgo8L2c+CjwvZz4KPC9zdmc+"/>
+            </button>
+            <button onclick="document.getElementById('player_html5').volume += 0.1;">
+                <img width="40" height="40" alt="pause" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIiA/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgd2lkdGg9IjM1NSIgaGVpZ2h0PSIzMjciIHZpZXdCb3g9IjAgMCAzNTUgMzI3IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGRlc2M+Q3JlYXRlZCB3aXRoIEZhYnJpYy5qcyAzLjYuMzwvZGVzYz4KPGRlZnM+CjwvZGVmcz4KPGcgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSAxNzggMTY0KSIgID4KPGcgc3R5bGU9IiIgICA+CgkJPGcgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSAwIDApIiBpZD0iYWQzZWRlNDAtMzZlYy00NTcxLWFmMjYtODA1NWFlYjRjZDJmIiAgPgo8cmVjdCBzdHlsZT0ic3Ryb2tlOiBub25lOyBzdHJva2Utd2lkdGg6IDE7IHN0cm9rZS1kYXNoYXJyYXk6IG5vbmU7IHN0cm9rZS1saW5lY2FwOiBidXR0OyBzdHJva2UtZGFzaG9mZnNldDogMDsgc3Ryb2tlLWxpbmVqb2luOiBtaXRlcjsgc3Ryb2tlLW1pdGVybGltaXQ6IDQ7IGZpbGw6IHJnYigyNTUsMjU1LDI1NSk7IGZpbGwtb3BhY2l0eTogMDsgZmlsbC1ydWxlOiBub256ZXJvOyBvcGFjaXR5OiAxOyIgdmVjdG9yLWVmZmVjdD0ibm9uLXNjYWxpbmctc3Ryb2tlIiAgeD0iLTYwMCIgeT0iLTQ1MCIgcng9IjAiIHJ5PSIwIiB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI5MDAiIC8+CjwvZz4KCQk8ZyB0cmFuc2Zvcm09Im1hdHJpeCg0LjgxIDAgMCA0LjgxIC03Ny40MSAwKSIgID4KPHBhdGggc3R5bGU9InN0cm9rZTogbm9uZTsgc3Ryb2tlLXdpZHRoOiAxOyBzdHJva2UtZGFzaGFycmF5OiBub25lOyBzdHJva2UtbGluZWNhcDogYnV0dDsgc3Ryb2tlLWRhc2hvZmZzZXQ6IDA7IHN0cm9rZS1saW5lam9pbjogbWl0ZXI7IHN0cm9rZS1taXRlcmxpbWl0OiA0OyBmaWxsOiByZ2IoMTAxLDEwMSwxMDEpOyBmaWxsLXJ1bGU6IG5vbnplcm87IG9wYWNpdHk6IDE7IiB2ZWN0b3ItZWZmZWN0PSJub24tc2NhbGluZy1zdHJva2UiICB0cmFuc2Zvcm09IiB0cmFuc2xhdGUoLTMzLjkxLCAtNTApIiBkPSJNIDUxLjcwNiAxNi4wMjkgQyA1My4zNTYgMTYuMDI5IDU0LjcwMjAwMDAwMDAwMDAwNSAxNy4zNzEgNTQuNzAyMDAwMDAwMDAwMDA1IDE4Ljk3MyBMIDU0LjcwMjAwMDAwMDAwMDAwNSA4MC45NzMgQyA1NC43MDIwMDAwMDAwMDAwMDUgODIuNjI2IDUzLjM1NjAwMDAwMDAwMDAxIDgzLjk3IDUxLjcwNiA4My45NyBMIDMyLjY0MSA2My40NTggTCAxNS4xMjQgNjMuNDU4IEMgMTQuMDQwMDAwMDAwMDAwMDAxIDYzLjQ1OCAxMy4xMDkgNjIuNTgwOTk5OTk5OTk5OTk2IDEzLjEwOSA2MS40OTUgTCAxMy4xMDkgMzguMDkgQyAxMy4xMDkgMzcuMDA0MDAwMDAwMDAwMDA1IDE0LjA0IDM2LjEyNyAxNS4xMjQgMzYuMTI3IEwgMzMuMDAyIDM2LjEyNyBMIDUxLjcwNiAxNi4wMjkgeiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiAvPgo8L2c+CgkJPGcgdHJhbnNmb3JtPSJtYXRyaXgoNC44MSAwIDAgNC44MSAxMTAuOTYgMCkiICA+CjxwYXRoIHN0eWxlPSJzdHJva2U6IG5vbmU7IHN0cm9rZS13aWR0aDogMTsgc3Ryb2tlLWRhc2hhcnJheTogbm9uZTsgc3Ryb2tlLWxpbmVjYXA6IGJ1dHQ7IHN0cm9rZS1kYXNob2Zmc2V0OiAwOyBzdHJva2UtbGluZWpvaW46IG1pdGVyOyBzdHJva2UtbWl0ZXJsaW1pdDogNDsgZmlsbDogcmdiKDEwMSwxMDEsMTAxKTsgZmlsbC1ydWxlOiBub256ZXJvOyBvcGFjaXR5OiAxOyIgdmVjdG9yLWVmZmVjdD0ibm9uLXNjYWxpbmctc3Ryb2tlIiAgdHJhbnNmb3JtPSIgdHJhbnNsYXRlKC03My4wNywgLTUwKSIgZD0iTSA2OS41MjkgMzYuMTc5IEwgNzYuNjA2IDM2LjE3OSBDIDc3LjA3MyAzNi4xNzkgNzcuMzgxOTk5OTk5OTk5OTkgMzYuNDg5MDAwMDAwMDAwMDA0IDc3LjM4MTk5OTk5OTk5OTk5IDM2LjkwMiBMIDc3LjM4MTk5OTk5OTk5OTk5IDQ1LjY4NiBMIDg2LjE2Mzk5OTk5OTk5OTk5IDQ1LjY4NiBDIDg2LjU3Njk5OTk5OTk5OTk4IDQ1LjY4NiA4Ni44OTA5OTk5OTk5OTk5OSA0Ni4wNDcgODYuODkwOTk5OTk5OTk5OTkgNDYuNDYgTCA4Ni44OTA5OTk5OTk5OTk5OSA1My41NCBDIDg2Ljg5MDk5OTk5OTk5OTk5IDUzLjk1MiA4Ni41Nzc5OTk5OTk5OTk5OSA1NC4zMTMgODYuMTYzOTk5OTk5OTk5OTkgNTQuMzEzIEwgNzcuMzgxOTk5OTk5OTk5OTkgNTQuMzEzIEwgNzcuMzgxOTk5OTk5OTk5OTkgNjMuMDQ1IEMgNzcuMzgxOTk5OTk5OTk5OTkgNjMuNDU4IDc3LjA3MTk5OTk5OTk5OTk5IDYzLjgxOSA3Ni42MDYgNjMuODE5IEwgNjkuNTI5IDYzLjgxOSBDIDY5LjExNiA2My44MTkgNjguODA2IDYzLjQ1ODAwMDAwMDAwMDAwNiA2OC44MDYgNjMuMDQ1IEwgNjguODA2IDU0LjMxMyBMIDYwLjAyNCA1NC4zMTMgQyA1OS42MDgwMDAwMDAwMDAwMDQgNTQuMzEzIDU5LjI0OCA1My45NTIwMDAwMDAwMDAwMDUgNTkuMjQ4IDUzLjU0IEwgNTkuMjQ4IDQ2LjQ2IEMgNTkuMjQ4IDQ2LjA0NzAwMDAwMDAwMDAwNCA1OS42MDggNDUuNjg2IDYwLjAyNCA0NS42ODYgTCA2OC44MDYgNDUuNjg2IEwgNjguODA2IDM2LjkwMiBDIDY4LjgwNyAzNi40ODggNjkuMTE2IDM2LjE3OSA2OS41MjkgMzYuMTc5IHoiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgLz4KPC9nPgo8L2c+CjwvZz4KPC9zdmc+"/>
+            </button>
+            <audio id="player_html5" src="http://stream.zeno.fm/wscf83wat68uv/;">No se puede reproducir el audio porque su navegador no tiene HTML5</audio>
+        </section>
+
+        <section id="clima_minas">
+            <a class="weatherwidget-io" href="https://forecast7.com/es/n34d36n55d26/minas/" data-label_1="MINAS, Lavalleja" data-label_2="Uruguay" data-mode="Current" data-theme="original" >MINAS, Lavalleja Uruguay</a>
+        </section>
+        <section id="clima_cdmx">
+            <a class="weatherwidget-io" href="https://forecast7.com/es/19d25n99d10/mexico-city/" data-label_1="CDMX" data-label_2="México" data-mode="Current" data-theme="original" >CDMX México</a>
+            <script>
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+            </script>
+        </section>
+    </header>
+    <main>
+        <h2>Programas especiales</h2>
+        <ul class="material" id="programacion">
+            <li>Lunes y Miércoles 20:00 - 22:00<br><b>Recordando los 80</b><br>Conduce Carlos Moreale</li>
+            <li>Sábados 22:00<br><b>Fiebre de sábado a la noche</b><br>Conduce Édison Gómez</li>
+        </ul>
+
+        <div id="banner_fiebre_de_sabado">
+            <img src="images/banner fiebre de sabado.webp" width="1200" height="387">
+        </div>
+    </main>
+    <script>
+        const beforeUnloadListener = (event) => {
+            if (!document.getElementById('player_html5').paused) {
+                event.preventDefault();
+                return event.returnValue = "Are you sure you want to exit?";
+            }
+        };
+        addEventListener("beforeunload", beforeUnloadListener, {capture: true});
+    </script>
+</body>
+</html>
