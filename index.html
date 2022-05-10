@@ -90,18 +90,41 @@
         ul.material {
             padding: 0;
         }
-        #banner_fiebre_de_sabado {
+        .banner {
             text-align: center;
         }
-        #banner_fiebre_de_sabado img {
+        hr {
+            color: #dfdede;
+            width: 80%;
+        }
+        .banner img {
             max-width: 100%;
             height: auto;
+            margin: 10px auto;
         }
         main h2 {
             text-transform: uppercase;
             border-bottom: 2px solid red;
             display: inline-block;
         }
+        .banner.odd {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
         @media screen and (max-width:580px) {
             #sitelogo {
                 left:50%;
@@ -156,13 +179,17 @@
     <main>
         <h2>Programas especiales</h2>
         <ul class="material" id="programacion">
-            <li>Lunes y Miércoles 20:00 - 22:00<br><b>Recordando los 80</b><br>Conduce Carlos Moreale</li>
+            <li>Lunes y Miércoles 20:00 - 22:00<br><b>Recordando los 80's</b><br>Conduce Carlos Moreale</li>
             <li>Sábados 22:00 - 00:00<br><b>Fiebre de sábado a la noche</b><br>Conduce Édison Gómez</li>
             <li>Domingos 00:00 - 02:00<br><b>Trasnochando</b><br>Conduce Fabricio Noria</li>
         </ul>
 
-        <div id="banner_fiebre_de_sabado">
-            <img src="images/banner%20fiebre%20de%20sabado.webp" width="1200" height="387" alt="Fiebre de Sábado a la Noche, sábados a las 22:00">
+        <div class="banner odd">
+            <img src="images/banner%20fiebre%20de%20sabado%202.webp" width="1200" height="387" alt="Fiebre de Sábado a la Noche, sábados a las 22:00">
+        </div>
+        <hr>
+        <div class="banner">
+            <img src="images/banner%20recordando%20los%2080.webp" width="1200" height="387" alt="Recordando los 80, lunes y miércoles a las 20:00">
         </div>
     </main>
     <script>
