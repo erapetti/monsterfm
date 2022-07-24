@@ -69,6 +69,9 @@
             display: block;
             min-height: 300px;
         }
+        #fondo_xs {
+            display: none;
+        }
         #mediaplayer {
             margin: 15px auto;
             padding: 30px 40px;
@@ -163,6 +166,16 @@
             #inicial, #textologo {
                 padding: 0.5em;
             }
+            header {
+                background-color: #18405b;
+            }
+            img#fondo {
+                visibility: hidden;
+            }
+            img#fondo_xs {
+                display: block;
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -173,6 +186,7 @@
             <div id="logo"><span id="inicial" aria-hidden="true">M</span><h1 id="textologo">Monster FM</h1></div>
             <div id="slogan">Minas (Uruguay) - Ciudad de México (México)</div>
         </div>
+        <img id="fondo_xs" src="images/holt hyde.webp" alt="fondo" aria-hidden="true"/>
         <section id="mediaplayer">
             <h2>ESCUCHAR AHORA</h2>
             <button onclick="document.getElementById('player_html5').play();">
@@ -242,7 +256,7 @@
         </div>
         <hr>
         <div class="banner">
-            <img src="images/banner%20trasnochando.webp" width="1200" height="387" alt="Trasnochando, domingos a las 00:00">
+            <img src="images/banner%20trasnochando%202.webp" width="983" height="983" alt="Trasnochando, domingos a las 00:00">
         </div>
         <hr>
         <div class="banner">
