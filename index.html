@@ -337,7 +337,6 @@
                 message.innerHTML = (media.error.code > 0 ? media.error.message : "");
                 if (media.error.code > 0) {
                     const buttons = Array.prototype.slice.call(document.getElementById('mediaplayer').querySelectorAll('button'));
-                    console.log(buttons);
                     buttons.map((x)=>{x.setAttribute('disabled','disabled'); console.log(x);});
                     media.load();
                 }
