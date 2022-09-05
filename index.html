@@ -333,7 +333,14 @@
         function status() {
             try {
                 const media = document.getElementById('player_html5');
-                document.getElementById('message').innerHTML = (media.error.code > 0 ? media.error.message : "");
+                const message = document.getElementById('message');
+                message.innerHTML = (media.error.code > 0 ? media.error.message : "");
+                if (media.error.code > 0) {
+                    const buttons = Array.prototype.slice.call(document.getElementById('mediaplayer').querySelectorAll('button'));
+                    console.log(buttons);
+                    buttons.map((x)=>{x.setAttribute('disabled','disabled'); console.log(x);});
+                    media.load();
+                }
             } catch (ignore) {}
         }
         function startUp() {
@@ -342,7 +349,7 @@
                 clearBuffer();
                 media.volume = 0.5;
                 changeVolume(0);
-                setInterval(status, 1000); 
+                setInterval(status, 5000); 
             } catch (ignore) {}
         }
         startUp();
