@@ -303,8 +303,10 @@
         </div>
     </main>
     <script>
+        const media = document.getElementById('player_html5');
+        var playing = 0;
         const beforeUnloadListener = (event) => {
-            if (!document.getElementById('player_html5').paused) {
+            if (!media.paused || playing) {
                 event.preventDefault();
                 return event.returnValue = "Are you sure you want to exit?";
             }
@@ -313,45 +315,45 @@
 
         function changeVolume(delta) {
             try {
-                const media = document.getElementById('player_html5');
                 media.volume += delta;
                 document.getElementById('knob').style.transform = 'rotate(' + Math.round(media.volume*264,0) + 'deg)';
             } catch (ignore) {}
         }
         function clearBuffer() {
             try {
-                const media = document.getElementById('player_html5');
                 media.currentTime = 0;
                 media.load();
             } catch (ignore) {}
         }
         function play() {
+            playing = 1;
             try {
-                const media = document.getElementById('player_html5');
                 const promise = media.play();
             } catch (ignore) {}
         }
         function pause() {
+            playing = 0;
             try {
-                const media = document.getElementById('player_html5');
                 media.pause();
             } catch (ignore) {}
         }
         function status() {
             try {
-                const media = document.getElementById('player_html5');
                 const message = document.getElementById('message');
                 message.innerHTML = (media.error.code > 0 ? media.error.message : "");
                 if (media.error.code > 0) {
                     const buttons = Array.prototype.slice.call(document.getElementById('mediaplayer').querySelectorAll('button'));
                     buttons.map((x)=>{x.setAttribute('disabled','disabled'); console.log(x);});
+                    media.pause();
                     media.load();
+                    if (playing) {
+                        media.play();
+                    }
                 }
             } catch (ignore) {}
         }
         function startUp() {
             try {
-                const media = document.getElementById('player_html5');
                 clearBuffer();
                 media.volume = 0.5;
                 changeVolume(0);
